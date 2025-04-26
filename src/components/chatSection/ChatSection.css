@@ -1,0 +1,150 @@
+.chatsection{
+    background-color: var(--background-color);
+    height: 100vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.topsection{
+    width:100%;
+    height: 75vh;
+    overflow-y: auto;
+    padding: 20px;
+}
+.bottomsection{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+.headings{
+   width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2vmax;
+}
+.headings span:nth-child(1){
+    font-size: 4em;
+    background:linear-gradient(to right,rgb(255, 0, 200),rgba(68, 0, 144 ),rgb(157, 156, 156));
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+}
+.headings span:nth-child(2){
+    font-size: 2.9em;
+    background:linear-gradient(to right,rgba(68, 0, 144 ),rgb(255,0,200),rgb(157, 156, 156));
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+}
+.headings span:nth-child(3){
+    font-size: 1.5em;
+    color: var(--color);
+    opacity:0.8 ;
+}
+.bottomsection input{
+    width:50%;
+    height: 60px;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 40px;
+    background-color: var(--btn-background-color);
+    color: var(--btn-color);
+    border: none;
+    outline: none;
+    box-shadow:2px 2px 10px var(--btn-background-color) ;
+}
+.sendbtn{
+    width: 60px;
+height: 60px;
+padding: 10px;
+border-radius: 50px;
+border: none;
+background-color: var(--btn-background-color);
+transition: all 0.5s;
+cursor: pointer;
+box-shadow:2px 2px 10px var(--btn-background-color) ;
+}
+.sendbtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.sendbtn svg{
+    width: 25px;
+    height: 25px;
+    color: var(--btn-color);
+}
+.sendbtn:hover:not(:disabled){
+    background-color: var(--hover-btn-background-color);
+}
+.userbox{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    color:var(--color);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.aibox{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    color:var(--color);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.userbox img, .aibox img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    filter: drop-shadow(2px 2px 2px var(--color));
+}
+.userbox p, .aibox p {
+    flex: 1;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+.result img{
+    filter:drop-shadow(2px 2px 2px var(--color));
+}
+.loader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding: 10px;
+}
+.loader hr{
+    height:4px ;
+    border: none;
+    border-radius: 2px;
+    background: linear-gradient(to right, rgba(118, 210, 215, 0.4), var(--background-color), rgb(118,210,215));
+    animation: loading 1.5s infinite;
+}
+@keyframes loading {
+    0% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
